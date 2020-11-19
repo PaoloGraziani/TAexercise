@@ -1,0 +1,129 @@
+% Template per generare 
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{lmodern}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+		\node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+% \usepackage[group-separator={\,}]{siunitx}
+\usepackage[left=2cm, right=2cm, bottom=3cm]{geometry}
+\frenchspacing
+
+\newcommand{\num}[1]{#1}
+
+% Macro varie...
+\newcommand{\file}[1]{\texttt{#1}}
+\renewcommand{\arraystretch}{1.3}
+\newcommand{\esempio}[2]{
+\noindent\begin{minipage}{\textwidth}
+\begin{tabular}{|p{11cm}|p{5cm}|}
+	\hline
+	\textbf{File \file{input.txt}} & \textbf{File \file{output.txt}}\\
+	\hline
+	\tt \small #1 &
+	\tt \small #2 \\
+	\hline
+\end{tabular}
+\end{minipage}
+}
+
+% Dati del task
+\newcommand{\gara}{esercizio di introduzione alla programmazione dinamica}
+\newcommand{\nome}{Campo minato}
+\newcommand{\nomebreve}{minato}
+
+\begin{document}
+% Intestazione
+\noindent{\Large \gara}
+\vspace{0.5cm}
+
+\noindent{\Huge \textbf \nome~(\texttt{\nomebreve})}
+
+% Descrizione del task
+\section*{Descrizione del problema}
+
+Un robot deve portarsi dalla cella $(1,1)$
+alla cella $(M,N)$ di una scacchiera rettangolare
+composta da $M \times N$ celle di forma quadrata.
+Il robot non può mai fuoriuscire dalla griglia.
+Sono previsti due soli tipi di mosse:
+\begin{description}
+\item[scendi] il robot si muove dalla cella $(i,j)$ alla cella $(i+1,j)$. (Mossa disponibile solo quando $i<M$) 
+\item[procedi] il robot si muove dalla cella $(i,j)$ alla cella $(i,j+1)$. (Mossa disponibile solo quando $j<N$)   
+\end{description}  
+
+Il terreno è minato: alcune delle celle sono interdette e devono essere evitate, fortunatamente siamo provvisti di una mappa che precisa
+la situazione di ogni cella $(i,j)$ della griglia:
+sono da evitare le celle segnalate da una crocetta (\file{map}$[i,j]=$'+'),
+le altre celle sono tutte transitabili e riportano invece un asterisco (\file{map}$[i,j]=$'*').
+In particolare, \file{map}$[1,1]=$\file{map}$[M,N]=$'*'.
+
+
+% Input
+\section*{File di input}
+Il programma deve leggere da un file di nome \file{input.txt}.
+La prima riga contiene due interi positivi $M$ e $N$, separati da spazio, i quali rappresentano le dimensioni della scacchiera.
+Le successive $M$ righe forniscono la mappa, ossia:
+l'$i$-esima di queste $M$ righe contiene una sequenza di $N$ caratteri
+ciascuno dei quali è un '+' (cella minata, ossia interdetta) oppure un '*' (cella transitabile).
+Il $j$-esimo di questi caratteri è \file{map}$[i,j]$.
+Nel file \file{input.txt}
+questi caratteri NON sono separati da degli spazi:
+le righe dalla~$2$ alla~$M+1$ constano di precisamente $N$ caratteri
+cui aggiungere il fine riga.
+
+% Output
+\section*{File di output}
+Il programma deve scrivere in un file di nome \file{output.txt}. Deve venire stampato un unico numero, il numero di percorsi diversi che il robot può seguire per andare dalla cella $(1,1)$ alla cella $(M,N)$.
+
+
+% Esempi
+\section*{Esempio di input/output}
+\esempio{
+5 4
+
+****
+
++***
+
+*+**
+
+++**
+
+++**
+}{9}
+
+
+% Assunzioni
+\section*{Assunzioni}
+\begin{itemize}
+\item $0 < M,N \leq 200$
+\item \file{map}$[1,1]=$\file{map}$[M,N]=$'*'..
+\item Il risultato è interno all'intervallo rappresentato dagli int a $32$ bit.
+
+\end{itemize}
+
+% Subtasks
+\section*{Subtask}
+\begin{itemize}
+\item \textbf{Subtask 1 [\phantom{1}0 punti]:} caso di esempio.
+\item \textbf{Subtask 2 [10 punti]:} $M = 2$, $N \leq 200$, nessuna mina.
+\item \textbf{Subtask 3 [10 punti]:} $M = 2$, $N \leq 200$.
+\item \textbf{Subtask 4 [10 punti]:} $M = 3$, $N \leq 200$, nessuna mina.
+\item \textbf{Subtask 5 [10 punti]:} $M = 3$, $N \leq 200$.
+\item \textbf{Subtask 6 [10 punti]:} nessuna mina, $M,N \leq 10$.
+\item \textbf{Subtask 7 [10 punti]:} nessuna mina, $M,N \leq 30$.
+\item \textbf{Subtask 8 [10 punti]:} $M,N \leq 10$.
+\item \textbf{Subtask 9 [10 punti]:} $M,N \leq 20$.
+\item \textbf{Subtask 10 [10 punti]:} $M,N \leq 50$.
+\item \textbf{Subtask 11 [10 punti]:} $M,N \leq 200$.  
+\end{itemize}
+
+
+\end{document}

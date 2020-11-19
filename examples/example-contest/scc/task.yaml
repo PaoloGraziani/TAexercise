@@ -1,0 +1,10 @@
+infile: ''
+memory_limit: 256
+name: scc
+outfile: ''
+time_limit: 1.0
+title: Componenti fortemente connesse
+token_mode: disabled
+public_testcases: all
+feedback_level: full
+

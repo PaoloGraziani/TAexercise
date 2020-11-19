@@ -1,0 +1,10 @@
+name: io_std
+title: "Input/output da `std`"
+time_limit: 1.0
+memory_limit: 256
+infile: ""
+outfile: ""
+token_mode: disabled
+public_testcases: all
+feedback_level: full
+
