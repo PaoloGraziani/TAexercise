@@ -1,7 +1,7 @@
 name: algo2020
 title: TuringArena Example Contest
-start: 2020-01-08T20:00:00Z
-end: 2021-01-08T20:00:00Z
+start: 2021-01-08T20:00:00Z
+end: 2022-01-08T20:00:00Z
 users:
   - username: alerighi
     token: alerighi
@@ -17,6 +17,24 @@ users:
   - username: user2
     token: user2
     name: Mr. User 2
+  - username: user3
+    token: user3
+    name: Mr. User 3
+  - username: user4
+    token: user4
+    name: Mr. User 4
+  - username: user5
+    token: user5
+    name: Mr. User 5
+  - username: user6
+    token: user6
+    name: Mr. User 6
+  - username: user7
+    token: user7
+    name: Mr. User 7
+  - username: user8
+    token: user8
+    name: Mr. User 8
 languages:
   - C
   - C++
@@ -24,5 +42,8 @@ languages:
   - Python3
   - Rust
 problems:
-  - game123
-  - easy1
+  - io_file
+  - io_std
+  - for1_std
+  - for2_std
+

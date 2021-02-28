@@ -20,22 +20,11 @@ da tastiera) e deve quindi restituire quello stesso intero (così come a scriver
  C++, oppure quelle di tipo integer in Pascal).
 
 ### Subtask
-- **Subtask 1 [30 punti]**: il tuo programma deve risolvere correttamente il caso d'esempio del testo (non vi serve nemmeno leggere l'input).
-- **Subtask 2 [30 punti]**: il numero fornito in input è $13$.
-- **Subtask 3 [40 punti]**: nessuna restrizione (oltre quella sul valore assoluto espressa nella sezione di "Assunzioni" generali).
+- **Subtask 1 \[30 punti\]**: il tuo programma deve risolvere correttamente il caso d'esempio del testo (non vi serve nemmeno leggere l'input).
+- **Subtask 2 \[30 punti\]**: il numero fornito in input è $13$.
+- **Subtask 3 \[40 punti\]**: nessuna restrizione (oltre quella sul valore assoluto espressa nella sezione di "Assunzioni" generali).
 
 #### Note generali sul sistema di sottoposizione (con valutazione a feedback immediato) delle vostre soluzioni
 
 Al sistema di sottoposizione va sottomesso solo il file sorgente del vostro programma. Il nostro server compiler\`a tale sorgente avvalendosi del compilatore
 suggerito dall'estensione del file da voi sottomesso.
-
-| linguaggio adottato | estensione file sottomesso | compilatore/interprete utilizzato dal server
-|-|-|-|
-| python  | .py  | python3
-| bash    | .sh  | bash
-| C++     | .cpp | g++
-| C       | .c   | gcc
-| Pascal  | .pas | fpc
-
-Consigliamo di testare la soluzione in locale prima di sottometterla.
-Se riscontrate difformità di comportamento tra quanto in locale a quanto sul server, le esatte opzioni di compilazione utilizzate dal server sul singolo problema sono riportate nella pagina del problema sul sito.

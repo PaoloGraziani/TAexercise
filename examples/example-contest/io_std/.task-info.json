@@ -1,0 +1,42 @@
+{
+    "IOI": {
+        "attachments": [
+            {
+                "content_type": "text/plain",
+                "name": "hint.txt",
+                "path": "att/hint.txt"
+            }
+        ],
+        "limits": {
+            "memory": 256,
+            "time": 1.0
+        },
+        "name": "io_std",
+        "scoring": {
+            "max_score": 100.0,
+            "subtasks": [
+                {
+                    "max_score": 30.0,
+                    "testcases": 1
+                },
+                {
+                    "max_score": 30.0,
+                    "testcases": 1
+                },
+                {
+                    "max_score": 40.0,
+                    "testcases": 5
+                }
+            ]
+        },
+        "statements":[
+			{
+				"language":"testo",
+				"content_type":"text/html",
+				"path":"testo/testo.html"
+			}
+		],
+        "title": "Input/output da `std`",
+        "version": 1
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "IOI": {
+        "attachments": [],
+        "limits": {
+            "memory": 256,
+            "time": 2.0
+        },
+        "name": "for2_std",
+        "scoring": {
+            "max_score": 100.0,
+            "subtasks": [
+                {
+                    "max_score": 10.0,
+                    "testcases": 1
+                },
+                {
+                    "max_score": 15.0,
+                    "testcases": 1
+                },
+                {
+                    "max_score": 25.0,
+                    "testcases": 5
+                },
+                {
+                    "max_score": 50.0,
+                    "testcases": 5
+                }
+            ]
+        },
+        "statements":[
+			{
+				"language":"testo",
+				"content_type":"text/html",
+				"path":"testo/testo.html"
+			}
+		],
+        "title": "Esercizio sui for annidati computo tabelline",
+        "version": 1
+    }
+}

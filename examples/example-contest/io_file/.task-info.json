@@ -1,0 +1,36 @@
+{
+    "IOI": {
+        "attachments": [],
+        "limits": {
+            "memory": 256,
+            "time": 1.0
+        },
+        "name": "io_file",
+        "scoring": {
+            "max_score": 100.0,
+            "subtasks": [
+                {
+                    "max_score": 30.0,
+                    "testcases": 1
+                },
+                {
+                    "max_score": 30.0,
+                    "testcases": 1
+                },
+                {
+                    "max_score": 40.0,
+                    "testcases": 5
+                }
+            ]
+        },
+        "statements":[
+			{
+				"language":"testo",
+				"content_type":"text/html",
+				"path":"testo/testo.html"
+			}
+		],
+        "title": "Gestire input ed output da file",
+        "version": 1
+    }
+}

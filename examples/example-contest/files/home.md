@@ -1,63 +1,98 @@
-# TuringArena Example Contest
+# TuringArena
 
-This is an example contest running in TuringArena.
+## Elenco esercizi
 
-Syntax Highlighting:
+### Esercizi per prendere confidenza con TA
 
-```cpp
-    int f(int a, int b) {
-        return a + b;
-    }
-```
+* [io_file](io_file)
+* [io_std](io_std) 
+* [for1_std](for1_std)
+* [for2_std](for2_std)
 
-```python
-    def f(a: int, b: int) -> int:
-        return a + b
-```
+### Esercizi di riscaldamento/assestamento:
 
-Math: $\sqrt{x^2 + y^2}$
+* max_x
+* mediana_x
+* light_coin
+* mastermind
+* bit_edit_to_zero
+* black_and_white
+* string_matching
+* mappa
+* bungeejumping
 
-Lorem ipsum.
+### Ricerca binaria:
 
-Lorem ipsum.
+* ric_bin
+* ric_bin2
+* bungeejumping
 
-Lorem ipsum.
+### Cammini/BFS/Dijkstra:
 
-Lorem ipsum.
+* mappa
+* maree
+* bungeejumping
 
-Lorem ipsum.
+### DFS:
 
-Lorem ipsum.
+* scc
+* tarjan
 
-Lorem ipsum.
+### Greedy:
 
-Lorem ipsum.
+* easyfall
 
-Lorem ipsum.
+### Buone Caratterizzazioni:
 
-Lorem ipsum.
+* oddcycle
+* tecla
+* longwalk
+* funghi
+* matita
+* euler_dir
+* flusso
 
-Lorem ipsum.
+### Esercizi sulla ricorsione:
 
-Lorem ipsum.
+* board2tok
+* pillole
+* pillole_list
+* piastrelle
+* piastrelle2
+* rank_unrank_ABstrings
+* specchio
+* alberi
+* minato
+* poldo
+* bonsai
 
-Lorem ipsum.
+### Esercizi sulla programmazine dinamica:
 
-Lorem ipsum.
+* pillole
+* piastrelle
+* piastrelle2
+* minato
+* triangolo
+* uova
+* slalom
+* somme
+* poldo
+* poldo_sequenza
+* lcs
+* edit_distance
+* longwalk
+* collage
+* funghi
+* is_shuffle_of
+* bonsai
 
-Lorem ipsum.
+### Strutture dati:
 
-Lorem ipsum.
+* mosche
 
-Lorem ipsum.
+### Progressively finite games:
 
-Lorem ipsum.
-
-Lorem ipsum.
-
-Lorem ipsum.
-
-Lorem ipsum.
-
-Lorem ipsum.
+* game123
+* game2stacks
+* chococroc
 
