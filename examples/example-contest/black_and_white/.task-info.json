@@ -1,0 +1,89 @@
+{
+    "IOI": {
+        "attachments": [
+            {
+                "content_type": "text/plain",
+                "name": "input_1.txt",
+                "path": "att/input_1.txt"
+            },
+            {
+                "content_type": "text/plain",
+                "name": "output_2.txt",
+                "path": "att/output_2.txt"
+            },
+            {
+                "content_type": "text/plain",
+                "name": "output_0.txt",
+                "path": "att/output_0.txt"
+            },
+            {
+                "content_type": "text/plain",
+                "name": "input_0.txt",
+                "path": "att/input_0.txt"
+            },
+            {
+                "content_type": "text/plain",
+                "name": "hint_1.txt",
+                "path": "att/hint_1.txt"
+            },
+            {
+                "content_type": "text/plain",
+                "name": "hint_0.txt",
+                "path": "att/hint_0.txt"
+            },
+            {
+                "content_type": "text/plain",
+                "name": "input_2.txt",
+                "path": "att/input_2.txt"
+            },
+            {
+                "content_type": "text/plain",
+                "name": "output_1.txt",
+                "path": "att/output_1.txt"
+            }
+        ],
+        "limits": {
+            "memory": 128,
+            "time": 2.0
+        },
+        "name": "black_and_white",
+        "scoring": {
+            "max_score": 100.0,
+            "subtasks": [
+                {
+                    "max_score": 5.0,
+                    "testcases": 2
+                },
+                {
+                    "max_score": 10.0,
+                    "testcases": 5
+                },
+                {
+                    "max_score": 30.0,
+                    "testcases": 7
+                },
+                {
+                    "max_score": 20.0,
+                    "testcases": 4
+                },
+                {
+                    "max_score": 20.0,
+                    "testcases": 4
+                },
+                {
+                    "max_score": 15.0,
+                    "testcases": 4
+                }
+            ]
+        },
+        "statements":[
+			{
+				"language":"testo",
+				"content_type":"text/html",
+				"path":"testo/testo.html"
+			}
+		],
+        "title": "Bianco e Nero",
+        "version": 1
+    }
+}

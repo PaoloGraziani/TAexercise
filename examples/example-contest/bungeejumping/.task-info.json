@@ -1,0 +1,51 @@
+{
+    "IOI": {
+        "attachments": [
+            {
+                "content_type": "text/plain",
+                "name": "input1.txt",
+                "path": "att/input1.txt"
+            },
+            {
+                "content_type": "text/plain",
+                "name": "input0.txt",
+                "path": "att/input0.txt"
+            }
+        ],
+        "limits": {
+            "memory": 512,
+            "time": 5.0
+        },
+        "name": "bungeejumping",
+        "scoring": {
+            "max_score": 100.0,
+            "subtasks": [
+                {
+                    "max_score": 0.0,
+                    "testcases": 2
+                },
+                {
+                    "max_score": 20.0,
+                    "testcases": 3
+                },
+                {
+                    "max_score": 40.0,
+                    "testcases": 6
+                },
+                {
+                    "max_score": 40.0,
+                    "testcases": 7
+                }
+            ]
+        },
+        "statements":[
+			{
+				"language":"testo",
+				"content_type":"text/html",
+				"path":"testo/testo.html"
+			}
+		],
+        "title": "Jump Jump",
+        "version": 1
+    }
+}

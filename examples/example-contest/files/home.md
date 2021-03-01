@@ -11,15 +11,15 @@
 
 ### Esercizi di riscaldamento/assestamento:
 
-* max_x
-* mediana_x
-* light_coin
-* mastermind
-* bit_edit_to_zero
-* black_and_white
-* string_matching
-* mappa
-* bungeejumping
+* [max_x](max_x)
+* [mediana_x](mediana_x)
+* [light_coin](light_coin)
+* [mastermind](mastermind)
+* [bit_edit_to_zero](bit_edit_to_zero)
+* [black_and_white](black_and_white)
+* [string_matching](string_matching)
+* [mappa](mappa)
+* [bungeejumping](bungeejumping)
 
 ### Ricerca binaria:
 

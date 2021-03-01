@@ -1,0 +1,76 @@
+{
+    "IOI": {
+        "attachments": [
+            {
+                "content_type": "text/plain",
+                "name": "max_x.c",
+                "path": "att/max_x.c"
+            },
+            {
+                "content_type": "text/plain",
+                "name": "grader.c",
+                "path": "att/grader.c"
+            },
+            {
+                "content_type": "text/plain",
+                "name": "ourLibToPlay.h",
+                "path": "att/ourLibToPlay.h"
+            }
+        ],
+        "limits": {
+            "memory": 256,
+            "time": 1.0
+        },
+        "name": "max_x",
+        "scoring": {
+            "max_score": 100.0,
+            "subtasks": [
+                {
+                    "max_score": 1.0,
+                    "testcases": 2
+                },
+                {
+                    "max_score": 2.0,
+                    "testcases": 4
+                },
+                {
+                    "max_score": 4.0,
+                    "testcases": 11
+                },
+                {
+                    "max_score": 8.0,
+                    "testcases": 11
+                },
+                {
+                    "max_score": 16.0,
+                    "testcases": 13
+                },
+                {
+                    "max_score": 5.0,
+                    "testcases": 13
+                },
+                {
+                    "max_score": 32.0,
+                    "testcases": 13
+                },
+                {
+                    "max_score": 16.0,
+                    "testcases": 13
+                },
+                {
+                    "max_score": 16.0,
+                    "testcases": 13
+                }
+            ]
+        },
+        "statements":[
+			{
+				"language":"testo",
+				"content_type":"text/html",
+				"path":"testo/testo.html"
+			}
+		],
+        "title": "Individuare il Max in Versione Interattiva",
+        "version": 1
+    }
+}

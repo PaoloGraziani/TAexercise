@@ -1,0 +1,80 @@
+{
+    "IOI": {
+        "attachments": [
+            {
+                "content_type": "text/plain",
+                "name": "light_coin.c",
+                "path": "att/light_coin.c"
+            },
+            {
+                "content_type": "text/plain",
+                "name": "grader.c",
+                "path": "att/grader.c"
+            },
+            {
+                "content_type": "text/plain",
+                "name": "ourLibToPlay.h",
+                "path": "att/ourLibToPlay.h"
+            }
+        ],
+        "limits": {
+            "memory": 256,
+            "time": 3.5
+        },
+        "name": "light_coin",
+        "scoring": {
+            "max_score": 100.0,
+            "subtasks": [
+                {
+                    "max_score": 2.0,
+                    "testcases": 1
+                },
+                {
+                    "max_score": 3.0,
+                    "testcases": 4
+                },
+                {
+                    "max_score": 5.0,
+                    "testcases": 7
+                },
+                {
+                    "max_score": 5.0,
+                    "testcases": 7
+                },
+                {
+                    "max_score": 5.0,
+                    "testcases": 7
+                },
+                {
+                    "max_score": 10.0,
+                    "testcases": 8
+                },
+                {
+                    "max_score": 10.0,
+                    "testcases": 4
+                },
+                {
+                    "max_score": 10.0,
+                    "testcases": 4
+                },
+                {
+                    "max_score": 25.0,
+                    "testcases": 6
+                },
+                {
+                    "max_score": 25.0,
+                    "testcases": 7
+                }
+            ]
+        },
+        "statements":[
+			{
+				"language":"testo",
+				"content_type":"text/html",
+				"path":"testo/testo.html"
+			}
+		],	
+        "title": "Individuare la Moneta Leggera",
+        "version": 1
+    }
+}

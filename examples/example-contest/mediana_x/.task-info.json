@@ -1,0 +1,68 @@
+{
+    "IOI": {
+        "attachments": [
+            {
+                "content_type": "text/plain",
+                "name": "mediana_x.c",
+                "path": "att/mediana_x.c"
+            },
+            {
+                "content_type": "text/plain",
+                "name": "grader.c",
+                "path": "att/grader.c"
+            },
+            {
+                "content_type": "text/plain",
+                "name": "ourLibToPlay.h",
+                "path": "att/ourLibToPlay.h"
+            }
+        ],
+        "limits": {
+            "memory": 256,
+            "time": 2.5
+        },
+        "name": "mediana_x",
+        "scoring": {
+            "max_score": 100.0,
+            "subtasks": [
+                {
+                    "max_score": 0.0,
+                    "testcases": 2
+                },
+                {
+                    "max_score": 0.0,
+                    "testcases": 2
+                },
+                {
+                    "max_score": 0.0,
+                    "testcases": 2
+                },
+                {
+                    "max_score": 10.0,
+                    "testcases": 3
+                },
+                {
+                    "max_score": 20.0,
+                    "testcases": 4
+                },
+                {
+                    "max_score": 35.0,
+                    "testcases": 6
+                },
+                {
+                    "max_score": 35.0,
+                    "testcases": 7
+                }
+            ]
+        },
+        "statements":[
+			{
+				"language":"testo",
+				"content_type":"text/html",
+				"path":"testo/testo.html"
+			}
+		],
+        "title": "Forza Mediana! (ora in Versione Interattiva)",
+        "version": 1
+    }
+}

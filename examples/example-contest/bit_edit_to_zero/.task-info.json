@@ -1,0 +1,127 @@
+{
+    "IOI": {
+        "attachments": [
+            {
+                "content_type": "text/plain",
+                "name": "esempio1.output.txt",
+                "path": "att/esempio1.output.txt"
+            },
+            {
+                "content_type": "text/plain",
+                "name": "template_sol.cpp",
+                "path": "att/template_sol.cpp"
+            },
+            {
+                "content_type": "text/plain",
+                "name": "esempio3.output.txt",
+                "path": "att/esempio3.output.txt"
+            },
+            {
+                "content_type": "text/plain",
+                "name": "esempio2.output.txt",
+                "path": "att/esempio2.output.txt"
+            },
+            {
+                "content_type": "text/plain",
+                "name": "esempio1.input.txt",
+                "path": "att/esempio1.input.txt"
+            },
+            {
+                "content_type": "text/plain",
+                "name": "esempio5.input.txt",
+                "path": "att/esempio5.input.txt"
+            },
+            {
+                "content_type": "text/plain",
+                "name": "esempio4.output.txt",
+                "path": "att/esempio4.output.txt"
+            },
+            {
+                "content_type": "text/plain",
+                "name": "esempio4.input.txt",
+                "path": "att/esempio4.input.txt"
+            },
+            {
+                "content_type": "text/plain",
+                "name": "template_sol.c",
+                "path": "att/template_sol.c"
+            },
+            {
+                "content_type": "text/plain",
+                "name": "esempio5.output.txt",
+                "path": "att/esempio5.output.txt"
+            },
+            {
+                "content_type": "text/plain",
+                "name": "template_sol.py",
+                "path": "att/template_sol.py"
+            },
+            {
+                "content_type": "text/plain",
+                "name": "esempio3.input.txt",
+                "path": "att/esempio3.input.txt"
+            },
+            {
+                "content_type": "text/plain",
+                "name": "esempio2.input.txt",
+                "path": "att/esempio2.input.txt"
+            },
+            {
+                "content_type": "text/plain",
+                "name": "bit_edit_to_zero_template_solution.py",
+                "path": "att/bit_edit_to_zero_template_solution.py"
+            }
+        ],
+        "limits": {
+            "memory": 256,
+            "time": 0.4
+        },
+        "name": "bit_edit_to_zero",
+        "scoring": {
+            "max_score": 100.0,
+            "subtasks": [
+                {
+                    "max_score": 0.0,
+                    "testcases": 5
+                },
+                {
+                    "max_score": 10.0,
+                    "testcases": 11
+                },
+                {
+                    "max_score": 20.0,
+                    "testcases": 11
+                },
+                {
+                    "max_score": 20.0,
+                    "testcases": 11
+                },
+                {
+                    "max_score": 10.0,
+                    "testcases": 11
+                },
+                {
+                    "max_score": 20.0,
+                    "testcases": 11
+                },
+                {
+                    "max_score": 10.0,
+                    "testcases": 11
+                },
+                {
+                    "max_score": 10.0,
+                    "testcases": 11
+                }
+            ]
+        },
+        "statements":[
+			{
+				"language":"testo",
+				"content_type":"text/html",
+				"path":"testo/testo.html"
+			}
+		],
+        "title": "Da n a zero in meno mosse possibili",
+        "version": 1
+    }
+}

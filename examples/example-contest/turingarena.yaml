@@ -46,4 +46,13 @@ problems:
   - io_std
   - for1_std
   - for2_std
+  - max_x
+  - mediana_x
+  - light_coin
+  - mastermind
+  - bit_edit_to_zero
+  - black_and_white
+  - string_matching
+  - mappa
+  - bungeejumping
 

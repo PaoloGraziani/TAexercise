@@ -1,0 +1,55 @@
+{
+    "IOI": {
+        "attachments": [
+            {
+                "content_type": "text/plain",
+                "name": "input_bonus.txt",
+                "path": "att/input_bonus.txt"
+            },
+            {
+                "content_type": "text/plain",
+                "name": "output_bonus.txt",
+                "path": "att/output_bonus.txt"
+            }
+        ],
+        "limits": {
+            "memory": 64,
+            "time": 1.0
+        },
+        "name": "mappa",
+        "scoring": {
+            "max_score": 100.0,
+            "subtasks": [
+                {
+                    "max_score": 0.0,
+                    "testcases": 1
+                },
+                {
+                    "max_score": 20.0,
+                    "testcases": 6
+                },
+                {
+                    "max_score": 30.0,
+                    "testcases": 4
+                },
+                {
+                    "max_score": 20.0,
+                    "testcases": 6
+                },
+                {
+                    "max_score": 30.0,
+                    "testcases": 12
+                }
+            ]
+        },
+        "statements":[
+			{
+				"language":"testo",
+				"content_type":"text/html",
+				"path":"testo/testo.html"
+			}
+		],
+        "title": "Mappa antica",
+        "version": 1
+    }
+}
