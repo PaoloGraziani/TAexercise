@@ -1,0 +1,54 @@
+{
+    "IOI": {
+        "attachments": [
+            {
+                "content_type": "text/plain",
+                "name": "README.txt",
+                "path": "att/README.txt"
+            }
+        ],
+        "limits": {
+            "memory": 256,
+            "time": 1.0
+        },
+        "name": "ric_bin2",
+        "scoring": {
+            "max_score": 100.0,
+            "subtasks": [
+                {
+                    "max_score": 10.0,
+                    "testcases": 5
+                },
+                {
+                    "max_score": 10.0,
+                    "testcases": 5
+                },
+                {
+                    "max_score": 20.0,
+                    "testcases": 14
+                },
+                {
+                    "max_score": 20.0,
+                    "testcases": 8
+                },
+                {
+                    "max_score": 20.0,
+                    "testcases": 1
+                },
+                {
+                    "max_score": 20.0,
+                    "testcases": 1
+                }
+            ]
+        },
+        "statements":[
+			{
+				"language":"testo",
+				"content_type":"text/html",
+				"path":"testo/testo.html"
+			}
+		],
+        "title": "Ricerca binaria -> approfondimenti",
+        "version": 1
+    }
+}

@@ -25,28 +25,28 @@ Repository contenete esercizi di algoritmi per Turing Arena
 
 ### Ricerca binaria:
 
-* ric_bin
-* ric_bin2
-* bungeejumping
+* ric_bin:heavy_check_mark:
+* ric_bin2:heavy_check_mark:
+* bungeejumping:heavy_check_mark:
 
 ### Cammini/BFS/Dijkstra:
 
-* mappa
-* maree
-* bungeejumping
+* mappa:heavy_check_mark:
+* maree:x: (*Manca contenuto esercizio* )
+* bungeejumping:heavy_check_mark:
 
 ### DFS:
 
-* scc
-* tarjan
+* scc:x: (*Mancano le librerie a cui fa riferimento il gen* )
+* tarjan:x: (*Manca esempio nel testo* )
 
 ### Greedy:
 
-* easyfall
+* easyfall:heavy_check_mark:
 
 ### Buone Caratterizzazioni:
 
-* oddcycle
+* oddcycle:x: (*Generatore non funzionante*)
 * tecla
 * longwalk
 * funghi

@@ -1,0 +1,28 @@
+{
+    "IOI": {
+        "attachments": [],
+        "limits": {
+            "memory": 512,
+            "time": 1.0
+        },
+        "name": "tarjan",
+        "scoring": {
+            "max_score": 100.0,
+            "subtasks": [
+                {
+                    "max_score": 100.0,
+                    "testcases": 19
+                }
+            ]
+        },
+        "statements":[
+			{
+				"language":"testo",
+				"content_type":"text/html",
+				"path":"testo/testo.html"
+			}
+		],
+        "title": "Algoritmo di Tarjan",
+        "version": 1
+    }
+}

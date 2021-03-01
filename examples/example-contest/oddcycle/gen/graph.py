@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 
 # Libreria di funzioni sui grafi.
 #
@@ -60,30 +60,30 @@
 from random import sample, shuffle, choice, randint as _randint
 from math import sqrt
 from bisect import bisect_right, bisect_left
-from sys import stderr, maxint
+from sys import stderr, maxsize
 from sortedcontainers import SortedSet as sortedset
 
 
 # random da A a B pero' con variabili long
 def randint(A, B=None):
 	"""Random da A a B che funziona con valori long."""
-	if B is None:
+	if B == None:
 		return _randint(0, A-1)
 	return _randint(A, B-1)
 
 
 # campiono K elementi in Tot evitando quelli in Pop (assume Pop sottoinsieme di Tot)
-def lsample(Tot, K, Pop = xrange(0)):
+def lsample(Tot, K, Pop = range(0)):
 	"""Ritorna una lista con un campione di K elementi in Tot ma non in Pop."""
 	if isinstance(Tot,int):
-		Tot = xrange(Tot)
-	if isinstance(Tot,long):
+		Tot = range(Tot)
+	if isinstance(Tot,int):
 		Tot = lrange(Tot)
 	if not isinstance(Tot, lrange) and not (0 <= K and len(Pop) + K <= len(Tot)):
-		raise StandardError("Parameter K out of bounds.")
-	Add = [randint((Tot.n if isinstance(Tot,lrange) else len(Tot))-len(Pop)-K+1) for i in xrange(K)]
+		raise Exception("Parameter K out of bounds.")
+	Add = [randint((Tot.n if isinstance(Tot,lrange) else len(Tot))-len(Pop)-K+1) for i in range(K)]
 	Add.sort()
-	for i in xrange(K):
+	for i in range(K):
 		Add[i] += i
 	if isinstance(Tot, set):
 		Tot = list(Tot)
@@ -95,14 +95,14 @@ def lsample(Tot, K, Pop = xrange(0)):
 		Pop.sort()
 	i = j = 0
 	ip = Pop.__iter__()
-	p = ip.next() if i < len(Pop) else None
+	p = next(ip) if i < len(Pop) else None
 	while j < K:
 		if i >= len(Pop) or p > Tot[Add[j]+i]:
 			Add[j] = Tot[Add[j]+i]
 			j+=1
 		else:
 			i+=1
-			p = ip.next() if i < len(Pop) else None
+			p = next(ip) if i < len(Pop) else None
 	return Add
 
 
@@ -120,27 +120,27 @@ class graph:
 		I valori ammissibili per type sono cycle,path,tree,forest,clique.
 		Se w e' specificato, il grafo viene considerato pesato, con pesi generati dalla funzione w().
 		E' anche ammessa l'instanziazione graph(G) con G un grafo gia' esistente."""
-		if isinstance(N,graph) and E is None and M is None and type is None:
+		if isinstance(N,graph) and E == None and M == None and type == None:
 			E = sortedset(N.E)
-			if w is None:
+			if w == None:
 				w = N.w
-			if nw is None:
+			if nw == None:
 				nw = N.nw
-			if lbl is None:
+			if lbl == None:
 				lbl = list(N.lbl)
 			N = N.V
 		if not isinstance(N,int):
-			raise StandardError("Incompatible parameters specified.")
+			raise Exception("Incompatible parameters specified.")
 		self.V=N
 		if isinstance(E,int):
 			M=E
 			E=None
-		if E is None:
+		if E == None:
 			E = sortedset([])
 		else:
-			if (M is not None) or (type is not None):
-				raise StandardError("Incompatible parameters specified.")
-			if len(E) > 0 and isinstance(E.__iter__().next(),list):
+			if (M != None) or (type != None):
+				raise Exception("Incompatible parameters specified.")
+			if len(E) > 0 and isinstance(next(E.__iter__()),list):
 				E = [self.cod(e) for e in E]
 			E = sortedset(E)
 		if len(E)==0 and N > 1:
@@ -148,39 +148,39 @@ class graph:
 				E = sortedset(lsample(self.mMax(), M))
 			if type == 'connected':
 				if M < N-1:
-					raise StandardError("Parameter M out of bounds.")
-				for i in xrange(1,N):
+					raise Exception("Parameter M out of bounds.")
+				for i in range(1,N):
 					E.add(self.cod([randint(i),i]))
-				for i in xrange(M-N+1):
+				for i in range(M-N+1):
 					E.add(randint(self.mMax()))
 			if type == 'cycle':
-				for i in xrange(N):
+				for i in range(N):
 					E.add(self.cod([i,(i+1)%N]))
 			if type == 'path':
-				for i in xrange(N-1):
+				for i in range(N-1):
 					E.add(self.cod([i,i+1]))
 			if type == 'tree':
-				for i in xrange(1,N):
+				for i in range(1,N):
 					E.add(self.cod([randint(i),i]))
 			if type == 'forest':
 				if not (0 <= M < N):
-					raise StandardError("Parameter M out of bounds.")
+					raise Exception("Parameter M out of bounds.")
 				for i in lsample(N-1,M):
 					E.add(self.cod([randint(i+1),i+1]))
 			if type == 'clique':
-				for i in xrange(N-1):
-					for j in xrange(i+1,N):
+				for i in range(N-1):
+					for j in range(i+1,N):
 						E.add(self.cod([i,j]))
 			if type == 'star':
-				for i in xrange(1,N):
+				for i in range(1,N):
 					E.add(self.cod([0,i]))
 			if type == 'wheel':
-				for i in xrange(1,N):
+				for i in range(1,N):
 					E.add(self.cod([0,i]))
 					E.add(self.cod([i,(i+1)%N]))
 			# eventualmente aggiungere: gear, caterpillar/lobster
 		self.E=E
-		if w is None:
+		if w == None:
 			self.w=None
 		else:
 			try:
@@ -188,7 +188,7 @@ class graph:
 				self.w=w
 			except TypeError:
 				self.w = lambda e: w()
-		if nw is None:
+		if nw == None:
 			self.nw=None
 		else:
 			try:
@@ -196,28 +196,28 @@ class graph:
 				self.nw=nw
 			except TypeError:
 				self.nw = lambda n: nw()
-		self.lbl = lbl if lbl is not None else range(self.V)
+		self.lbl = lbl if lbl != None else list(range(self.V))
 	# funzioni di stampa
 	def __repr__(self):
 		"""Rappresentazione python del grafo."""
 		s = self.__class__.__name__ + '(' + str(self.V) + ',' + str([e for e in self])
-		if self.w is not None:
+		if self.w != None:
 			s += ', w=' + repr(self.w)
-		if self.nw is not None:
+		if self.nw != None:
 			s += ', nw=' + repr(self.nw)
-		if not all([self.lbl[i] == i for i in xrange(self.V)]):
+		if not all([self.lbl[i] == i for i in range(self.V)]):
 			s += ', lbl=' + repr(self.lbl)
 		return s + ')'
 	def __str__(self):
 		"""Rappresentazione olimpica del grafo."""
 		s = str(self.V) + ' ' + str(self.M()) + '\n';
-		if self.nw is not None and self.V > 0:
-			inv = [0 for _ in xrange(self.V)]
-			for i in xrange(self.V):
+		if self.nw != None and self.V > 0:
+			inv = [0 for _ in range(self.V)]
+			for i in range(self.V):
 				inv[self.lbl[i]] = i
-			l = [self.nw(inv[i]) for i in xrange(self.V)]
+			l = [self.nw(inv[i]) for i in range(self.V)]
 			if isinstance(l[0], (tuple,list)):
-				for i in xrange(len(l[0])):
+				for i in range(len(l[0])):
 					s += ' '.join([str(x[i]) for x in l]) + '\n'
 			else:
 				s += ' '.join([str(x) for x in l]) + '\n'
@@ -225,7 +225,7 @@ class graph:
 		return s.rstrip()
 	def printedges(self, zero_based = None):
 		"""Rappresentazione olimpica del grafo, senza la prima riga."""
-		if zero_based is None:
+		if zero_based == None:
 			if hasattr(self, 'zero_based'):
 				zero_based = self.zero_based
 			else:
@@ -237,7 +237,7 @@ class graph:
 		for e in Ed:
 			de = self.dec(e)
 			s += str(self.lbl[de[0]]+(0 if zero_based else 1)) + ' ' + str(self.lbl[de[1]]+(0 if zero_based else 1))
-			if self.w is not None:
+			if self.w != None:
 				w = self.w(de)
 				if isinstance(w, (tuple,list,set)):
 					s += ' ' + ' '.join(map(str,w))
@@ -298,11 +298,11 @@ class graph:
 	def __mul__(self,other):
 		"""Prodotto cartesiano di grafi."""
 		G = self.__class__(self)
-		for i in xrange(other.V-1):
+		for i in range(other.V-1):
 			G += self
 		G.lbl = sum([[i+self.V*j for i in self.lbl] for j in other.lbl], [])
 		for e in other:
-			for i in xrange(self.V):
+			for i in range(self.V):
 				G += [e[0]*self.V+i,e[1]*self.V+i]
 		return G
 	def __imul__(self,other):
@@ -338,7 +338,7 @@ class graph:
 	# grafo complementare (~)
 	def __invert__(self):
 		"""Grafo complementare."""
-		G = self.__class__(self.V,sortedset(xrange(self.mMax())) - self.E)
+		G = self.__class__(self.V,sortedset(range(self.mMax())) - self.E)
 		return G
 	# funzioni astratte di codifica degli archi.
 	# devono rispettare che:
@@ -374,11 +374,11 @@ class graph:
 	# aggiungo K nuovi archi a caso, tra i candidati (oggetto edgerange-style)
 	def addedges(self, K, candidates = None):
 		"""Aggiunge K archi a caso al grafo, tra i candidati (oggetto di tipo edgerange o set/list di archi)."""
-		if candidates is None:
+		if candidates == None:
 			candidates = self.mMax()
 		if isinstance(candidates, int):
-			candidates = xrange(candidates)
-		if isinstance(candidates, xrange) and len(candidates)>0:
+			candidates = range(candidates)
+		if isinstance(candidates, range) and len(candidates)>0:
 			i = bisect_left(self.E, candidates[0])
 			j = bisect_left(self.E, candidates[-1]+1)
 			dup = self.E[i:j]
@@ -391,7 +391,7 @@ class graph:
 	# aggiunge archi fino a connettere il grafo
 	def connect(self):
 		"""Aggiunge il minor numero di archi necessario a connettere il grafo."""
-		lbl = range(self.V)
+		lbl = list(range(self.V))
 		rnk = [1 for i in lbl]
 		def find(x):
 			if x == lbl[x]:
@@ -410,14 +410,14 @@ class graph:
 		for e in self:
 			union(e[0],e[1])
 		comp = [ [] for i in range(self.V)]
-		for i in xrange(self.V):
+		for i in range(self.V):
 			comp[find(i)].append(i)
-		comp = filter(lambda x: len(x) > 0, comp)
+		comp = [x for x in comp if len(x) > 0]
 		shuffle(comp)
 		kcomp = [ len(i) for i in comp ]
-		for i in xrange(1,len(kcomp)):
+		for i in range(1,len(kcomp)):
 			kcomp[i] += kcomp[i-1]
-		for i in xrange(1,len(comp)):
+		for i in range(1,len(comp)):
 			a = randint(kcomp[i-1])
 			a = bisect_right(kcomp, a) # upper bound
 			a = choice(comp[a])
@@ -426,19 +426,19 @@ class graph:
 	# permuta i nodi del grafo
 	def shuffle(self, perm = None, fixed = None):
 		"""Permuta casualmente i nodi del grafo tra di loro."""
-		if fixed is not None and perm is None:
-			perm = range(self.V)
+		if fixed != None and perm == None:
+			perm = list(range(self.V))
 			fixed = set(fixed)
-			temp = list(set(xrange(self.V)) - fixed)
+			temp = list(set(range(self.V)) - fixed)
 			shuffle(temp)
 			j = 0
-			for i in xrange(self.V):
+			for i in range(self.V):
 				if i in fixed:
 					perm[i] = i
 				else:
 					perm[i] = temp[j]
 					j += 1
-		if perm is not None:
+		if perm != None:
 			self.lbl = [perm[i] for i in self.lbl]
 		else:
 			shuffle(self.lbl)
@@ -465,16 +465,16 @@ class dgraph(graph):
 	def __init__(self, N=0, E=None, type=None, w=None, nw=None, M=None, lbl=None):
 		"""Comprende tutti i costruttori per graph, piu' type='dag'.
 		Contempla la conversione di un grafo non diretto in grafo diretto, raddoppiando gli archi."""
-		if isinstance(N,ugraph) and E is None and M is None and type is None:
+		if isinstance(N,ugraph) and E == None and M == None and type == None:
 			E = [self.cod(e) for e in N]
 			E += [e^1 for e in E]
-			if w is None:
+			if w == None:
 				w = N.w
-			if lbl is None:
+			if lbl == None:
 				lbl = list(N.lbl)
 			N=N.V
-		if type is 'dag':
-			if M is None:
+		if type == 'dag':
+			if M == None:
 				M=E
 			E = [2*e+1 for e in lsample(N*(N-1)/2, M)]
 			type = None
@@ -522,16 +522,16 @@ class edgerange:
 		"""Costruisce un oggetto edgerange, con archi come in un grafo edge_type."""
 		if not isinstance(edge_type,graph):
 			if not ( issubclass(edge_type,graph) ):
-				raise StandardError("Parameter 1 (edge_type) must be a graph.")
+				raise Exception("Parameter 1 (edge_type) must be a graph.")
 			edge_type = edge_type()
-		if rdest is not None:
+		if rdest != None:
 			ran = [[ran,rdest]]
 		for r in ran:
 			if not ( r[0][1] <= r[1][0] or r[1][1] <= r[0][0] ):
-				raise StandardError("Self-overlapping range.")
-		for r in xrange(len(ran)-1):
+				raise Exception("Self-overlapping range.")
+		for r in range(len(ran)-1):
 			if not ( edge_type.cod([ran[r][0][1]-1,ran[r][1][1]-1]) < edge_type.cod([ran[r+1][0][0],ran[r+1][1][0]]) ):
-				raise StandardError("Overlapping ranges.")
+				raise Exception("Overlapping ranges.")
 		self.e_t = edge_type
 		self.R = ran
 		self.L = [(r[0][1]-r[0][0])*(r[1][1]-r[1][0]) for r in ran]
@@ -586,7 +586,7 @@ class _generic_iter:
 		self.obj = obj
 	def __iter__(self):
 		return self
-	def next(self):
+	def __next__(self):
 		if self.i >= len(self.obj):
 			raise StopIteration()
 		self.i += 1
@@ -600,8 +600,8 @@ class _graph_iter:
 		self.i = g.E.__iter__()
 	def __iter__(self):
 		return self
-	def next(self):
-		return self.g.dec(self.i.next())
+	def __next__(self):
+		return self.g.dec(next(self.i))
 
 
 class lrange:
@@ -623,8 +623,8 @@ class infrange:
 	def __iter__(self):
 		return _generic_iter(self)
 	def __len__(self):
-		return maxint
+		return maxsize
 
 
 if __name__ == "__main__":
-	print "Ambiente di test non implementato."
+	print("Ambiente di test non implementato.")

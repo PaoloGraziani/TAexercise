@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 # Usare pypy solo quando necessario. La compilazione richiede tempo e viene ricompilato per ogni testcase.
 
 from limiti import *

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>testo</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">
+body {
+font-family: Helvetica, arial, sans-serif;
+font-size: 14px;
+line-height: 1.6;
+padding-top: 10px;
+padding-bottom: 10px;
+background-color: white;
+padding: 30px;
+color: #333;
+}
+body > *:first-child {
+margin-top: 0 !important;
+}
+body > *:last-child {
+margin-bottom: 0 !important;
+}
+a {
+color: #4183C4;
+text-decoration: none;
+}
+a.absent {
+color: #cc0000;
+}
+a.anchor {
+display: block;
+padding-left: 30px;
+margin-left: -30px;
+cursor: pointer;
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+}
+table {
+padding: 0;
+border-collapse:collapse;
+}
+h1, h2, h3, h4, h5, h6 {
+margin: 20px 0 10px;
+padding: 0;
+font-weight: bold;
+-webkit-font-smoothing: antialiased;
+cursor: text;
+position: relative;
+}
+h2:first-child, h1:first-child, h1:first-child + h2, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+margin-top: 0;
+padding-top: 0;
+}
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+text-decoration: none;
+}
+h1 tt, h1 code {
+font-size: inherit;
+}
+h2 tt, h2 code {
+font-size: inherit;
+}
+h3 tt, h3 code {
+font-size: inherit;
+}
+h4 tt, h4 code {
+font-size: inherit;
+}
+h5 tt, h5 code {
+font-size: inherit;
+}
+h6 tt, h6 code {
+font-size: inherit;
+}
+h1 {
+font-size: 28px;
+color: black;
+}
+h2 {
+font-size: 24px;
+border-bottom: 1px solid #cccccc;
+color: black;
+}
+h3 {
+font-size: 18px;
+}
+h4 {
+font-size: 16px;
+}
+h5 {
+font-size: 14px;
+}
+h6 {
+color: #777777;
+font-size: 14px;
+}
+p, blockquote, ul, ol, dl, li, table, pre {
+margin: 15px 0;
+}
+hr {
+border: 0 none;
+color: #cccccc;
+height: 4px;
+padding: 0;
+}
+body > h2:first-child {
+margin-top: 0;
+padding-top: 0;
+}
+body > h1:first-child {
+margin-top: 0;
+padding-top: 0;
+}
+body > h1:first-child + h2 {
+margin-top: 0;
+padding-top: 0;
+}
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+margin-top: 0;
+padding-top: 0;
+}
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+margin-top: 0;
+padding-top: 0;
+}
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+margin-top: 0;
+}
+li p.first {
+display: inline-block;
+}
+ul, ol {
+padding-left: 30px;
+}
+ul :first-child, ol :first-child {
+margin-top: 0;
+}
+ul :last-child, ol :last-child {
+margin-bottom: 0;
+}
+dl {
+padding: 0;
+}
+dl dt {
+font-size: 14px;
+font-weight: bold;
+font-style: italic;
+padding: 0;
+margin: 15px 0 5px;
+}
+dl dt:first-child {
+padding: 0;
+}
+dl dt > :first-child {
+margin-top: 0;
+}
+dl dt > :last-child {
+margin-bottom: 0;
+}
+dl dd {
+margin: 0 0 15px;
+padding: 0 15px;
+}
+dl dd > :first-child {
+margin-top: 0;
+}
+dl dd > :last-child {
+margin-bottom: 0;
+}
+blockquote {
+border-left: 4px solid #dddddd;
+padding: 0 15px;
+color: #777777;
+}
+blockquote > :first-child {
+margin-top: 0;
+}
+blockquote > :last-child {
+margin-bottom: 0;
+}
+table {
+padding: 0;
+}
+table tr {
+border-top: 1px solid #cccccc;
+background-color: white;
+margin: 0;
+padding: 0;
+}
+table tr:nth-child(2n) {
+background-color: #f8f8f8;
+}
+table tr th {
+font-weight: bold;
+border: 1px solid #cccccc;
+text-align: left;
+margin: 0;
+padding: 6px 13px;
+}
+table tr td {
+border: 1px solid #cccccc;
+text-align: left;
+margin: 0;
+padding: 6px 13px;
+}
+table tr th :first-child, table tr td :first-child {
+margin-top: 0;
+}
+table tr th :last-child, table tr td :last-child {
+margin-bottom: 0;
+}
+img {
+max-width: 100%;
+}
+span.frame {
+display: block;
+overflow: hidden;
+}
+span.frame > span {
+border: 1px solid #dddddd;
+display: block;
+float: left;
+overflow: hidden;
+margin: 13px 0 0;
+padding: 7px;
+width: auto;
+}
+span.frame span img {
+display: block;
+float: left;
+}
+span.frame span span {
+clear: both;
+color: #333333;
+display: block;
+padding: 5px 0 0;
+}
+span.align-center {
+display: block;
+overflow: hidden;
+clear: both;
+}
+span.align-center > span {
+display: block;
+overflow: hidden;
+margin: 13px auto 0;
+text-align: center;
+}
+span.align-center span img {
+margin: 0 auto;
+text-align: center;
+}
+span.align-right {
+display: block;
+overflow: hidden;
+clear: both;
+}
+span.align-right > span {
+display: block;
+overflow: hidden;
+margin: 13px 0 0;
+text-align: right;
+}
+span.align-right span img {
+margin: 0;
+text-align: right;
+}
+span.float-left {
+display: block;
+margin-right: 13px;
+overflow: hidden;
+float: left;
+}
+span.float-left span {
+margin: 13px 0 0;
+}
+span.float-right {
+display: block;
+margin-left: 13px;
+overflow: hidden;
+float: right;
+}
+span.float-right > span {
+display: block;
+overflow: hidden;
+margin: 13px auto 0;
+text-align: right;
+}
+code, tt {
+margin: 0 2px;
+padding: 0 5px;
+white-space: nowrap;
+border: 1px solid #eaeaea;
+background-color: #f8f8f8;
+border-radius: 3px;
+}
+pre code {
+margin: 0;
+padding: 0;
+white-space: pre;
+border: none;
+background: transparent;
+}
+.highlight pre {
+background-color: #f8f8f8;
+border: 1px solid #cccccc;
+font-size: 13px;
+line-height: 19px;
+overflow: auto;
+padding: 6px 10px;
+border-radius: 3px;
+}
+pre {
+background-color: #f8f8f8;
+border: 1px solid #cccccc;
+font-size: 13px;
+line-height: 19px;
+overflow: auto;
+padding: 6px 10px;
+border-radius: 3px;
+}
+pre code, pre tt {
+background-color: transparent;
+border: none;
+}
+</style>
+</head>
+<body>
+<h1 id="ricerca-binaria-ric_bin">Ricerca binaria (ric_bin)</h1>
+<h2 id="descrizione-del-problema">Descrizione del problema</h2>
+<p>Devi scrivere un programma che indovina un numero naturale da <span class="math inline">1</span> a <span class="math inline"><em>n</em></span>. Il tuo programma dovrà contenere una funzione:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="dt">void</span> ricerca(<span class="dt">long</span> <span class="dt">long</span> <span class="dt">int</span> n)</span></code></pre></div>
+<p>che, il grader del sistema di valutazione lancerà dopo aver scelto un numero naturale <span class="math inline"><em>x</em></span> compreso tra <span class="math inline">1</span> e <span class="math inline"><em>n</em></span>. Compito della tua funzione è ricostruire quale sia il numero <span class="math inline"><em>x</em></span> a lei incognito raccogliendo informazioni tramite apposite chiamate alla funzione:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="dt">int</span> confronto_con(<span class="dt">long</span> <span class="dt">long</span> <span class="dt">int</span> g)</span></code></pre></div>
+<p>che, servita dal grader, ritorna: - <span class="math inline">1</span> se <span class="math inline"><em>g</em> &gt; <em>x</em></span> - <span class="math inline">0</span> se <span class="math inline"><em>g</em> = <em>x</em></span> - <span class="math inline"> − 1</span> se <span class="math inline"><em>g</em> &lt; <em>x</em></span></p>
+<p>Non appena ha tutti gli elementi necessari per conoscere il numero da indovinare, il tuo programma dovrà consegnare la sua risposta definitiva con una chiamata alla funzione:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="dt">void</span> answer(<span class="dt">long</span> <span class="dt">long</span> <span class="dt">int</span> risposta)</span></code></pre></div>
+<p>la partita tra il tuo programma ed il nostro di correzione finisce quì, col controllo che ‘risposta’=‘x’, ossia che la risposta definitiva prodotta dal tuo algoritmo sia sempre corretta!</p>
+<h2 id="subtask">Subtask</h2>
+<ul>
+<li><strong>Subtask 0 [5 punti]</strong>: il numero <span class="math inline"><em>x</em></span> da indovinare è 42.</li>
+<li><strong>Subtask 1 [7 punti]</strong>: non vi è limite sul numero di chiamate a <code>confronto_con</code>.</li>
+<li><strong>Subtask 2 [12 punti]</strong>: vengono consentite solo <span class="math inline"><em>n</em>/2</span> chiamate a <code>confronto_con</code>.</li>
+<li><strong>Subtask 3 [33 punti]</strong>: viene permesso solo quel minimo numero di chiamate a <code>confronto_con</code> che pur di giocare ottimamente consenta sempre, anche se sfortunati (caso peggiore), di individuare il numero misterioso <span class="math inline"><em>x</em></span>.</li>
+<li><strong>Subtask 4 [35 punti]</strong>: come sopra, ma l’avversario è ora libero di cambiare il numero che ha in mente in corso di partita, purché rispetti le informazioni già date nel corso della partita.</li>
+</ul>
+<h2 id="assunzioni">Assunzioni</h2>
+<ul>
+<li>Il programma termina dopo la prima chiamata alla funzione <code>answer</code> oppure allo scadere del tempo limite.</li>
+<li><span class="math inline">1 ≤ <em>n</em> ≤ 100 000 000 000</span></li>
+</ul>
+<h3 id="cosa-deve-contenere-il-file-da-sottomettere-e-come-viene-gestito-dal-server">Cosa deve contenere il File da Sottomettere, e come viene gestito dal server</h3>
+<p>L’estensione del file che sottometti, <em>.c, </em>.cpp oppure *.pas, determina se esso viene compilato col compilatore del C (gcc), del c++ (g++) oppure del PASCAL (fpc).</p>
+<p>Le opzioni di compilazione, specifiche al linguaggio, sono riportate nel dettaglio sulla pagina “Descrizione” del problema in modo che tu possa simulare esattamente in locale cosa succede sul server.</p>
+<p>I comandi di compilazione riportati assumono che il nome del file sottomesso (privato di estensione) coincida col nome del problema, tu comunque in locale puoi usare i nomi che preferisci anche se avrà per questo i suoi piccoli vantaggi attenersi a questi.</p>
+<p>In questo caso la struttura del file <code>&lt;nome_problema&gt;.&lt;estensione_linguaggio&gt;</code> che devi sottomettere è la seguente:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="dt">int</span> confronto_con(<span class="dt">long</span> <span class="dt">long</span> <span class="dt">int</span> val);</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a><span class="dt">void</span> answer(<span class="dt">long</span> <span class="dt">long</span> <span class="dt">int</span> risp);</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true"></a><span class="dt">void</span> ricerca(<span class="dt">long</span> <span class="dt">long</span> <span class="dt">int</span> n) {</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true"></a> <span class="co">// </span><span class="al">TODO</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true"></a>}</span></code></pre></div>
+<p>Sempre in attachment alla pagina del problema trovi già un <em>template</em> di soluzione parziale già compilabile.:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="dt">int</span> confronto_con(<span class="dt">long</span> <span class="dt">long</span> <span class="dt">int</span> val);</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true"></a><span class="dt">void</span> answer(<span class="dt">long</span> <span class="dt">long</span> <span class="dt">int</span> risp);</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true"></a><span class="dt">void</span> ricerca(<span class="dt">long</span> <span class="dt">long</span> <span class="dt">int</span> n) {</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true"></a>  <span class="dt">int</span> g = confronto_con(n/<span class="dv">2</span>);</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true"></a>  <span class="cf">if</span> (g == <span class="dv">0</span>) answer(n/<span class="dv">2</span>);</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true"></a>  <span class="cf">if</span> (g &gt; <span class="dv">0</span>) answer(<span class="dv">1</span>);</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true"></a>  <span class="cf">if</span> (g &lt; <span class="dv">0</span>) answer(n);</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true"></a>}</span></code></pre></div>
+<p>Come vedi i template sono purtroppo specifici al linguaggio scelto, e tipicamente noi ne offriamo solo alcuni. Non aspettarti che risolva molte istanze e faccia punti, ma `e compilabile sia in locale (se nella stessa cartella collocate anche il grader, vedere sotto) che poi sul server. Provare per credere. (Potete sottomettere quante volte volete. Se vi premono i punti sappiate che vale la regola del max.) Partire dal template ti è comodo in quanto copre per tè gli aspetti più rutinari della programmazione evitando però di spoilerare il problema e la sua soluzione. Sono queste logiche che ti chiediamo di produrre come parte finale del tuo percorso sul problema. Anche quando forniti solo per un altro linguaggio, i template possono comunque aiutarti nel disambiguare i dettagli più tecnici della consegna. Inoltre, partire da essi nell’ottenere il tuo codice rende più probabile che una volta che la tua soluzione gira bene in locale allora girerà senza problemi anche sul server di correzione.</p>
+<p>Resta il fatto che ti conviene sempre fare (ed organizzarti) un lavoro di sperimentazione in locale quando metti a punto la tua soluzione, prima di sottometterla. Invece: può avere senso sottomettere una soluzione non pensata per fare tutti (o anche nessuno dei) punti se questo ti aiuta a capire cosa non funziona. Anche a queso servono i casi di prova. L’atteggiamento sperimentale è chiave, ed è esso stesso una competenza preziosa che affinerai con questi problemi.</p>
+<p>Nel caso di un problema di natura interattiva come questo, dove il tuo programma interagisce con un ambiente più ampio (il grader, e talvolta anche con delle librerie o degli headers da includere), i comandi di compilazione riportati alla pagina del problema compilano ed assemblano i vari pezzi (il tuo programma, il grader, gli eventuali headers) se avrai collocato questi componenti entro la stessa cartella (in locale ti conviene farti una cartella per problema).</p>
+<p>Quando alla pagina del problema ti viene fornito il nostro grader (o la versione semplificata dello stesso) devi scaricartelo in locale entro questa cartella se vuoi testare il comportamento del tutto in locale. Comprendere meglio a cosa servono ti può aiutare nel fare i tuoi test in locale, che è l’approccio corretto col quale andrai lontano. In questo caso tra gli allegati trovi anche un file README.txt che prova a fornire ulteriori chiarimenti proprio su questo punto.</p>
+</body>
+</html>

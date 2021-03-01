@@ -1,0 +1,44 @@
+{
+    "IOI": {
+        "attachments": [],
+        "limits": {
+            "memory": 256,
+            "time": 1.0
+        },
+        "name": "oddcycle",
+        "scoring": {
+            "max_score": 100.0,
+            "subtasks": [
+                {
+                    "max_score": 0.0,
+                    "testcases": 2
+                },
+                {
+                    "max_score": 10.0,
+                    "testcases": 3
+                },
+                {
+                    "max_score": 20.0,
+                    "testcases": 2
+                },
+                {
+                    "max_score": 20.0,
+                    "testcases": 2
+                },
+                {
+                    "max_score": 50.0,
+                    "testcases": 3
+                }
+            ]
+        },
+        "statements":[
+			{
+				"language":"testo",
+				"content_type":"text/html",
+				"path":"testo/testo.html"
+			}
+		],
+        "title": "Odd Cycle Finding",
+        "version": 1
+    }
+}

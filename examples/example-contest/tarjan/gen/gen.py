@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 
 from limiti import *
 
@@ -75,15 +75,15 @@ def run(N, L, S):
     for x in grafo:
         M += len(x)
 
-    print "%d %d" % (N, M)
+    print ("%d %d" % (N, M))
 
     for nodo in range(len(grafo)):
         for arco in grafo[nodo]:
-            print "%d %d" % (nodo+1, arco+1)
+            print ("%d %d" % (nodo+1, arco+1))
 
 if __name__ == "__main__":
     if len(argv) != 4:
-        print usage
+        print (usage)
         exit(1)
 
     N, L, S = [int(x) for x in argv[1:]]

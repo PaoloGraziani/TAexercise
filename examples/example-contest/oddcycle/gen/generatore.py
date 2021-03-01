@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 
 from limiti import *
 from graph import *
@@ -23,17 +23,17 @@ def run(N, type):
     if type == 2:
         g = ugraph(N,type='clique')
     if type == 3:
-        g = ugraph(N/2,type='star')
-        g.addedges(N/2)
+        g = ugraph(N//2,type='star')
+        g.addedges(N//2)
     if type == 4:
-        g = ugraph(N/3,type='cycle')+ugraph(N/3,type='cycle')
+        g = ugraph(N//3,type='cycle')+ugraph(N/3,type='cycle')
     if type == 5:
         g = ugraph(N,type='connected') | ugraph(2*(N/8)+3,type='cycle')
-    print_nums(N)
+    print(N)
 
 
 if __name__ == "__main__":
-    if len(argv) != 3:
+    if len(argv) != 4:
         print (usage)
         exit(1)
 

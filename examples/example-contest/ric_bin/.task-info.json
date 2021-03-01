@@ -1,0 +1,70 @@
+{
+    "IOI": {
+        "attachments": [
+            {
+                "content_type": "text/plain",
+                "name": "ric_bin.c",
+                "path": "att/ric_bin.c"
+            },
+            {
+                "content_type": "text/plain",
+                "name": "README.txt",
+                "path": "att/README.txt"
+            },
+            {
+                "content_type": "text/plain",
+                "name": "input1.txt",
+                "path": "att/input1.txt"
+            },
+            {
+                "content_type": "text/plain",
+                "name": "grader.c",
+                "path": "att/grader.c"
+            },
+            {
+                "content_type": "text/plain",
+                "name": "input.txt",
+                "path": "att/input.txt"
+            }
+        ],
+        "limits": {
+            "memory": 256,
+            "time": 1.0
+        },
+        "name": "ric_bin",
+        "scoring": {
+            "max_score": 100.0,
+            "subtasks": [
+                {
+                    "max_score": 5.0,
+                    "testcases": 1
+                },
+                {
+                    "max_score": 15.0,
+                    "testcases": 4
+                },
+                {
+                    "max_score": 25.0,
+                    "testcases": 4
+                },
+                {
+                    "max_score": 25.0,
+                    "testcases": 6
+                },
+                {
+                    "max_score": 30.0,
+                    "testcases": 7
+                }
+            ]
+        },
+        "statements":[
+			{
+				"language":"testo",
+				"content_type":"text/html",
+				"path":"testo/testo.html"
+			}
+		],
+        "title": "Ricerca binaria",
+        "version": 1
+    }
+}
