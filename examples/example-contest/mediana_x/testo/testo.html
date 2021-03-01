@@ -342,7 +342,8 @@ border: none;
 </p>
 <h1 class="unnumbered" id="descrizione-del-problema">Descrizione del problema</h1>
 <p>Ti viene fornito un set di <span class="math inline"><em>n</em></span> biglie numerate da <span class="math inline">0</span> ad <span class="math inline"><em>n</em> − 1</span>, tutte di peso diverso. Devi scrivere una procedura che riordini le biglie o per peso strettamente crescente oppure per peso strettamente decrescente: la sola cosa importante è che, comunque prese 3 biglie consecutive nel tuo ordinamento, quella in posizione intermedia sia anche di peso intermedio. Il file sorgente da sottomettere deve avere la seguente struttura:</p>
-<pre><code>#include &quot;ourLibToPlay.h&quot;
+<pre><code>long int bigliaIntermedia(long int bigliaA, long int bigliaB, long int bigliaC);
+void consegnaBiglieInOrdine( long int biglia_in_pos[] );
 
 void ordina(long int n) {
    ...

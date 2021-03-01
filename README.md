@@ -13,10 +13,10 @@ Repository contenete esercizi di algoritmi per Turing Arena
 
 ### Esercizi di riscaldamento/assestamento:
 
-* max_x :x: (*import libreria*)
-* mediana_x :x: (*import libreria*)
-* light_coin :x: (*import libreria*)
-* mastermind :x: (*import libreria*)
+* max_x :heavy_check_mark:
+* mediana_x:heavy_check_mark:
+* light_coin:heavy_check_mark:
+* mastermind :heavy_check_mark:
 * bit_edit_to_zero :heavy_check_mark:
 * black_and_white :heavy_check_mark:
 * string_matching :x: (*import libreria*)
