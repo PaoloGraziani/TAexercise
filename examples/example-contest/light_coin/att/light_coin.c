@@ -1,5 +1,12 @@
 //problem: lightCoin, example of a solution file, Romeo Rizzi Jan 2015
-#include "ourLibToPlay.h"
+#define NONE  0
+#define LEFT  -1
+#define RIGHT  1
+
+int piatto_con_peso_maggiore();
+void collocaMoneta(long int moneta, int piatto);
+void denuncia(long int risp);
+
 void individua(long int n) {
   long int i;
   for(i = 0; i<n; i++) {
