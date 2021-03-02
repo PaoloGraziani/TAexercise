@@ -1,4 +1,5 @@
-#include "ourLibToPlay.h"
+void checkCode(int attempt[], int result[]);
+void pensoCheCodiceSia(int risposta[]);
 
 void solve(){
 	int sol[4] = {1, 4, 5, 0};

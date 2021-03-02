@@ -374,11 +374,10 @@ void solve() {
 <li>Spazio Limite: 256 MB.</li>
 </ul>
 <h2 id="cosa-deve-contenere-il-file-da-sottomettere-e-come-viene-gestito-dal-server">Cosa deve contenere il File da Sottomettere, e come viene gestito dal server</h2>
-<p>L’estensione del file che sottometti, *.c oppure *.cpp, determina se esso viene compilato col compilatore del C (gcc) oppure del C++ (g++).<br />
-Le opzioni di compilazione, specifiche al linguaggio, sono riportate nel dettaglio sulla pagina “Descrizione” del problema in modo che tu possa simulare esattamente in locale cosa succede sul server. I comandi di compilazione riportati assumono che il nome del file sottomesso (privato di estensione) coincida col nome del problema.<br />
-Nel caso di un problema interattivo come questo, dove il tuo programma interagisce con altri da noi predisposti (il grader ), i comandi di compilazione riportati compilano ed assemblano i vari pezzi (il tuo programma, e il grader). Se vuoi testare il comportamento del tutto in locale, devi allora scaricarti il nostro grader che rendiamo disponibile tra gli allegati alla pagina del problema.<br />
-Tra gli allegati potremmo inoltre fornire una soluzione di esempio che, pur essendo compilabile sia in locale che dal server (ove ad esso sottomessa), faccia pochi o nessun punto in quanto non significativa per il problema in questione.<br />
-In questo caso l’esempio compilabile reso disponibile al sito è il seguente:</p>
+<p>L’estensione del file che sottometti, *.c oppure *.cpp, determina se esso viene compilato col compilatore del C (gcc)oppure del c++ (g++).
+<p>Nel caso di un problema interattivo come questo, dove il tuo programma interagisce con altri da noi predisposti (il grader da includere), i comandi di compilazione riportati compilano ed assemblano i vari pezzi (il tuo programma e il grader). Se vuoi testare il comportamento del tutto in locale, devi allora scaricarti il nostro grader che rendiamo disponibile tra gli allegati alla pagina del problema.</p>
+<p>Tra gli allegati potremmo inoltre fornire una soluzione di esempio che, pur essendo compilabile sia in locale che dal server (ove ad esso sottomessa), faccia pochi o nessun punto in quanto non significativa per il problema in questione.</p>
+<p>In questo caso l’esempio compilabile reso disponibile al sito è il seguente:</p>
 <pre><code>// problem: mastermind, example of a dumb solution file
 
 void checkCode(int attempt[], int result[]);
