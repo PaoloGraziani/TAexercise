@@ -1,5 +1,6 @@
 // problem: ordina_x, example solver format, Romeo Rizzi Mar 2015
-#include "ourLibToPlay.h"
+long int bigliaIntermedia(long int bigliaA, long int bigliaB, long int bigliaC);
+void consegnaBiglieInOrdine( long int biglia_in_pos[] );
 
 inline void swappa(long int *a, long int *b) { long int tmp = *a; *a = *b; *b = tmp; }
 
