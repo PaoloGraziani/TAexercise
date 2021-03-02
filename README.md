@@ -19,7 +19,7 @@ Repository contenete esercizi di algoritmi per Turing Arena
 * mastermind :heavy_check_mark:
 * bit_edit_to_zero :heavy_check_mark:
 * black_and_white :heavy_check_mark:
-* string_matching :x: (*import libreria*)
+* string_matching:heavy_check_mark:
 * mappa :heavy_check_mark:
 * bungeejumping :heavy_check_mark:
 
