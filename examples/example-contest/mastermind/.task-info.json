@@ -5,16 +5,6 @@
                 "content_type": "text/plain",
                 "name": "sol_prova.c",
                 "path": "att/sol_prova.c"
-            },
-            {
-                "content_type": "text/plain",
-                "name": "grader.py",
-                "path": "att/grader.py"
-            },
-            {
-                "content_type": "text/plain",
-                "name": "ourLibToPlay.h",
-                "path": "att/ourLibToPlay.h"
             }
         ],
         "limits": {
