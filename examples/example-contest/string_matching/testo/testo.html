@@ -345,7 +345,8 @@ border: none;
 <p>Nel nostro caso particolare, <span class="smallcaps">A</span> è l’alfabeto inglese di 26 lettere minuscole (’a’, ’b’, ’c’, ...). Ricorda che devi trovare <strong>TUTTI</strong> i matching di <span class="smallcaps">P</span> in <span class="smallcaps">T</span>.</p>
 <p>Per trovare i matching tra <span class="smallcaps">P</span> e la stringa segreta <span class="smallcaps">T</span>, devi scrivere una procedura che riporti quanti matching vi sono tra le due stringhe e, per ognuno di essi, in quale posizione si trova.</p>
 <p>Il file da sottomettere deve avere la seguente struttura:</p>
-<pre><code>#include &quot;ourLibToPlay.h&quot;
+<pre><code>int charCompare(char p, int pos_in_txt);
+void pensoCheMatchingSia(int risposta[], int risp_len);
 
 void solve(char *pattern, int patt_len, int text_len) {
    ...
@@ -379,13 +380,13 @@ void solve(char *pattern, int patt_len, int text_len) {
 <li><p><span class="math inline"><em>n</em> ≤ <em>m</em></span></p></li>
 </ul>
 <h1 class="unnumbered" id="cosa-deve-contenere-il-file-da-sottomettere-e-come-viene-gestito-dal-server">Cosa deve contenere il File da Sottomettere, e come viene gestito dal server</h1>
-<p>L’estensione del file che sottometti, *.c oppure *.cpp, determina se esso viene compilato col compilatore del C (gcc) oppure del c++ (g++). Le opzioni di compilazione, specifiche al linguaggio, sono riportate nel dettaglio sulla pagina &quot;Descrizione&quot; del problema in modo che tu possa simulare esattamente in locale cosa succede sul server. I comandi di compilazione riportati assumono che il nome del file sottomesso (privato di estensione) coincida col nome del problema.</p>
-<p>Nel caso di un problema interattivo come questo, dove il tuo programma interagisce con altri da noi predisposti (il grader ed anche un header da includere), i comandi di compilazione riportati compilano ed assemblano i vari pezzi (il tuo programma, il grader, e l’header). Se vuoi testare il comportamento del tutto in locale, devi allora scaricarti il nostro grader e l’header che rendiamo disponibile tra gli allegati alla pagina del problema.</p>
+<p>L’estensione del file che sottometti, *.c oppure *.cpp, determina se esso viene compilato col compilatore del C (gcc)oppure del c++ (g++).
+<p>Nel caso di un problema interattivo come questo, dove il tuo programma interagisce con altri da noi predisposti (il grader da includere), i comandi di compilazione riportati compilano ed assemblano i vari pezzi (il tuo programma e il grader). Se vuoi testare il comportamento del tutto in locale, devi allora scaricarti il nostro grader che rendiamo disponibile tra gli allegati alla pagina del problema.</p>
 <p>Tra gli allegati potremmo inoltre fornire una soluzione di esempio che, pur essendo compilabile sia in locale che dal server (ove ad esso sottomessa), faccia pochi o nessun punto in quanto non significativa per il problema in questione.</p>
 <p>In questo caso l’esempio compilabile reso disponibile al sito è il seguente:</p>
 <pre><code>// problem: string_matching, example of a dumb solution file
-
-#include &quot;ourLibToPlay.h&quot;
+int charCompare(char p, int pos_in_txt);
+void pensoCheMatchingSia(int risposta[], int risp_len);
 
 void solve(char *pattern, int patt_len, int text_len) {
     int sol[1];
@@ -397,6 +398,6 @@ void solve(char *pattern, int patt_len, int text_len) {
         pensoCheMatchingSia(sol, 1);    
     }
 }</code></pre>
-<p>Ovviamente questa soluzione di esempio non risolverà molte istanze ma spero serva ad illustrare come potete muovervi ed è comunque compilabile sia in locale (se nella stessa cartella collocate anche il grader e l’header resi disponibili alla pagina del problema) sia ove sottoposta al server.</p>
+<p>Ovviamente questa soluzione di esempio non risolverà molte istanze ma spero serva ad illustrare come potete muovervi ed è comunque compilabile sia in locale (se nella stessa cartella collocate anche il grader reso disponibile alla pagina del problema) sia ove sottoposta al server.</p>
 </body>
 </html>

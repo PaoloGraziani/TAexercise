@@ -1,7 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
- 
-using namespace std;
 
 int maxCompare;
 int yourCompare;
