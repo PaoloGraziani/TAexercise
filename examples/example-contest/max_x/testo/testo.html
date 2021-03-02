@@ -376,16 +376,17 @@ void individua(long int n, long int maxLies) {
 <li><p><span class="math inline">1 ≤ <em>n</em> ≤ 1 000 000</span>.</p></li>
 </ul>
 <h1 class="unnumbered" id="cosa-deve-contenere-il-file-da-sottomettere-e-come-viene-gestito-dal-server">Cosa deve contenere il File da Sottomettere, e come viene gestito dal server</h1>
-<p>L’estensione del file che sottometti, *.c, *.cpp oppure *.pas, determina se esso viene compilato col compilatore del C (gcc), del c++ (g++) oppure del PASCAL (fpc). Le opzioni di compilazione, specifiche al linguaggio, sono riportate nel dettaglio sulla pagina &quot;Descrizione&quot; del problema in modo che tu possa simulare esattamente in locale cosa succede sul server. I comandi di compilazione riportati assumono che il nome del file sottomesso (privato di estensione) coincida col nome del problema.</p>
-<p>Nel caso di un problema interattivo come questo, dove il tuo programma interagisce con altri da noi predisposti (il grader ed anche un header da includere), i comandi di compilazione riportati compilano ed assemblano i vari pezzi (il tuo programma, il grader, e l’header). Se vuoi testare il comportamento del tutto in locale, devi allora scaricarti il nostro grader e l’header che rendiamo disponibile tra gli allegati alla pagina del problema.</p>
+<p>L’estensione del file che sottometti, *.c oppure *.cpp, determina se esso viene compilato col compilatore del C (gcc)oppure del c++ (g++).
+<p>Nel caso di un problema interattivo come questo, dove il tuo programma interagisce con altri da noi predisposti (il grader da includere), i comandi di compilazione riportati compilano ed assemblano i vari pezzi (il tuo programma e il grader). Se vuoi testare il comportamento del tutto in locale, devi allora scaricarti il nostro grader che rendiamo disponibile tra gli allegati alla pagina del problema.</p>
 <p>Tra gli allegati potremmo inoltre fornire una soluzione di esempio che, pur essendo compilabile sia in locale che dal server (ove ad esso sottomessa), faccia pochi o nessun punto in quanto non significativa per il problema in questione.</p>
 <p>In questo caso l’esempio compilabile reso disponibile al sito è il seguente:</p>
 <pre><code>// problem: max_x, example of a solution file, Romeo Rizzi Jan 2015
-#include &quot;ourLibToPlay.h&quot;
+int pesa(long int bigliaA, long int bigliaB);
+void pensoCheMaxSia(long int risp);
 void individua(long int n, long int maxLies) {
   if( pesa(0,n-1) &gt; 0)  pensoCheMaxSia(0); 
   else pensoCheMaxSia(n-1); 
 }</code></pre>
-<p>Ovviamente questa soluzione di esempio non risolverà molte istanze ma spero serva ad illustrare come potete muovervi ed è comunque compilabile sia in locale (se nella stessa cartella collocate anche il grader e l’header resi disponibili alla pagina del problema) sia ove sottoposta al server.</p>
+<p>Ovviamente questa soluzione di esempio non risolverà molte istanze ma spero serva ad illustrare come potete muovervi ed è comunque compilabile sia in locale (se nella stessa cartella collocate anche il grader reso disponibile alla pagina del problema) sia ove sottoposta al server.</p>
 </body>
 </html>
